@@ -65,6 +65,11 @@ pluginKeys.setup = function ()
 
 	-- nnoremap <silent> <F12> <Cmd>lua require'dap'.step_out()<CR>
 	-- nnoremap <silent> <Leader><F9> <Cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
+
+
+	-- outline | aerial
+	map({'n', 'i'}, 'tb', ':AerialToggle<cr>', opt)
+	map({'n', 'i'}, '<F8>', ':AerialToggle<cr>', opt)
 end
 
 -- nvim-cmp 自动补全
