@@ -1,0 +1,7 @@
+{
+    "single import": {
+      "prefix": "stest",
+      "body": "import222 \"${1:package}\"",
+      "description": "测试snippets ....."
+    }
+}

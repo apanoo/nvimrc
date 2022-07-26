@@ -1,0 +1,7 @@
+{
+    "single import": {
+      "prefix": "sgo",
+      "body": "import333 \"${1:package}\"",
+      "description": "测试go snippets ....."
+    }
+}

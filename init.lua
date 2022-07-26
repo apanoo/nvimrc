@@ -39,3 +39,9 @@ require("lsp.null-ls")
 
 -- keymaps
 require('keybindings').setup()
+
+-- helper
+require('helper')
+
+-- snippets
+require('snippets')
