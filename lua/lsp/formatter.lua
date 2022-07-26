@@ -11,6 +11,7 @@ formatter.setup({
         return {
           exe = "clang-format",
           args = {
+            -- "-style=file"
           },
           stdin = true,
         }
@@ -21,6 +22,7 @@ formatter.setup({
         return {
           exe = "clang-format",
           args = {
+            -- "-style=file"
           },
           stdin = true,
         }
