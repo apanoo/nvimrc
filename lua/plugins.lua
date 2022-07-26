@@ -77,6 +77,9 @@ return require('packer').startup({function ()
     -- comment
     use 'numToStr/Comment.nvim'
 
+    -- 高亮光标当前单词
+    use 'RRethy/vim-illuminate'
+
     --------------------- LSP --------------------
     use({ "williamboman/nvim-lsp-installer" })
     
