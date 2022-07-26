@@ -6,6 +6,26 @@ end
 
 formatter.setup({
   filetype = {
+    c = {
+      function()
+        return {
+          exe = "clang-format",
+          args = {
+          },
+          stdin = true,
+        }
+      end
+    },
+    cpp = {
+      function()
+        return {
+          exe = "clang-format",
+          args = {
+          },
+          stdin = true,
+        }
+      end
+    },
     lua = {
       function()
         return {
@@ -21,10 +41,10 @@ formatter.setup({
       end,
     },
     go = {
-      function ()
+      function()
         return {
           exe = "goimports",
-          args = {  },
+          args = {},
           stdin = true,
         }
       end
@@ -57,8 +77,8 @@ vim.api.nvim_exec(
   [[
 augroup FormatAutogroup
   autocmd!
-  autocmd BufWritePost *.js,*.rs,*.lua,*.go FormatWrite
+  autocmd BufWritePost *.js,*.rs,*.lua,*.go,*.cpp,*.c FormatWrite
 augroup END
-]],
+]] ,
   true
 )

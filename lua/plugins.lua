@@ -95,6 +95,7 @@ return require('packer').startup({function ()
     use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
     use("hrsh7th/cmp-nvim-lsp-signature-help") -- { name = 'nvim_lsp_signature_help' }
     -- 常见编程语言代码段
+    use("ray-x/lsp_signature.nvim") -- now just for clangd
     use("rafamadriz/friendly-snippets")
     -- UI 增强
     use("onsails/lspkind-nvim")
