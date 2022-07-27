@@ -22,4 +22,8 @@ require('kanagawa').setup({
     overrides = {},
 })
 
-vim.cmd("colorscheme kanagawa")
+local status_ok, _ = pcall(vim.cmd, "colorscheme kanagawa")
+if not status_ok then
+  vim.notify("colorscheme kanagawa not found!")
+  return
+end
