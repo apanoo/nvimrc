@@ -102,3 +102,6 @@ map("x", "<A-k>", ":move '<-2<CR>gv-gv")
 map('v', '<', '<gv')
 -- 向右
 map('v', '>', '>gv')
+
+-- 代码格式化
+map("n", "<leader>f", "<cmd>FormatWrite<cr>", opt)

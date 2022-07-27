@@ -31,6 +31,10 @@ return {
             capabilities = capabilities,
 			single_file_support = true,
 			on_attach = function (client, bufnr)
+                -- 禁用格式化功能，交给专门插件插件处理
+                client.server_capabilities.document_formatting = false
+                client.server_capabilities.document_range_formatting = false
+
                 require("lsp_signature").on_attach({
                     bind = true,
                     use_lspsaga = false,

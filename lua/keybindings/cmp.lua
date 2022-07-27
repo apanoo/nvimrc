@@ -27,7 +27,7 @@ return function(cmp)
 		-- 确认
 		-- Accept currently selected item. If none selected, `select` first item.
 		-- Set `select` to `false` to only confirm explicitly selected items.
-		["<Tab>"] = cmp.mapping.confirm({
+		["<CR>"] = cmp.mapping.confirm({
 			select = true,
 			behavior = cmp.ConfirmBehavior.Replace,
 		}),
@@ -48,7 +48,7 @@ return function(cmp)
 		end, { "i", "s" }),
 
 		-- super Tab
-		["<CR>"] = cmp.mapping(function(fallback)
+		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
 			elseif vim.fn["vsnip#available"](1) == 1 then
@@ -60,7 +60,7 @@ return function(cmp)
 			end
 		end, { "i", "s" }),
 
-		["<S-CR>"] = cmp.mapping(function()
+		["<S-Tab>"] = cmp.mapping(function()
 			if cmp.visible() then
 				cmp.select_prev_item()
 			elseif vim.fn["vsnip#jumpable"](-1) == 1 then

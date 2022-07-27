@@ -36,6 +36,7 @@ return {
           init_options = {
             --- true: 补全function时可以提供参数预览填充,通过tab键切换预览参数
             -- false: 只补全括号
+            -- 与cmp中的autopairs不冲突
             usePlaceholders = false,
           }
         })

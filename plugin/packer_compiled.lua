@@ -74,6 +74,11 @@ _G.packer_plugins = {
     path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "git@github.com:numToStr/Comment.nvim"
   },
+  ["aerial.nvim"] = {
+    loaded = true,
+    path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/aerial.nvim",
+    url = "git@github.com:stevearc/aerial.nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -114,11 +119,6 @@ _G.packer_plugins = {
     path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/filetype.nvim",
     url = "git@github.com:nathom/filetype.nvim"
   },
-  ["formatter.nvim"] = {
-    loaded = true,
-    path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/formatter.nvim",
-    url = "git@github.com:mhartington/formatter.nvim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -148,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "git@github.com:rebelot/kanagawa.nvim"
+  },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
+    url = "git@github.com:ray-x/lsp_signature.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -249,16 +254,6 @@ _G.packer_plugins = {
     path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/schemastore.nvim",
     url = "git@github.com:b0o/schemastore.nvim"
   },
-  sonokai = {
-    loaded = true,
-    path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/sonokai",
-    url = "git@github.com:sainnhe/sonokai"
-  },
-  ["symbols-outline.nvim"] = {
-    loaded = true,
-    path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
-    url = "git@github.com:simrat39/symbols-outline.nvim"
-  },
   ["telescope-fzf-native.nvim"] = {
     load_after = {},
     loaded = true,
@@ -276,11 +271,6 @@ _G.packer_plugins = {
     path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "git@github.com:akinsho/toggleterm.nvim"
   },
-  ["tokyodark.nvim"] = {
-    loaded = true,
-    path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/tokyodark.nvim",
-    url = "git@github.com:tiagovla/tokyodark.nvim"
-  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
@@ -290,6 +280,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "git@github.com:moll/vim-bbye"
+  },
+  ["vim-illuminate"] = {
+    loaded = true,
+    path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/vim-illuminate",
+    url = "git@github.com:RRethy/vim-illuminate"
   },
   ["vim-startuptime"] = {
     loaded = true,

@@ -26,7 +26,7 @@ require('config.nvim-comment').config()
 
 -- lsp
 require("lsp.setup")
-require("lsp.cmp")         -- 补全插件
+require("lsp.nvim-cmp")         -- 补全插件
 require("lsp.ui")
 
 -- debug dap
@@ -35,6 +35,7 @@ require("lsp.dap.nvim-dap-go").setup() -- setup golang
 
 -- 格式化
 require("lsp.formatter")
+-- lint
 require("lsp.null-ls")
 
 -- keymaps
