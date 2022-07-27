@@ -1,5 +1,5 @@
--- common
-require('common')
+-- common options
+require('options')
 
 -- theme
 require('theme')
@@ -38,10 +38,7 @@ require("lsp.formatter")
 require("lsp.null-ls")
 
 -- keymaps
-require('keybindings').setup()
-
--- helper
-require('helper')
+require('keybindings')
 
 -- snippets
 require('snippets')
