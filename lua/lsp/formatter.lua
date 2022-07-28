@@ -88,13 +88,9 @@ formatter.setup({
   filetype = fOptions,
 })
 
--- format on save
-vim.api.nvim_exec(
-  [[
-augroup FormatAutogroup
-  autocmd!
-  autocmd BufWritePost *.js,*.rs,*.lua,*.go,*.cpp,*.c,*.ts,*.tsx FormatWrite
-augroup END
-]] ,
-  true
-)
+vim.api.nvim_create_augroup('FormatAutogroup', { clear = true })
+vim.api.nvim_create_autocmd('BufWritePost', {
+    group = 'FormatAutogroup',
+    pattern = { '*.js', '*.rs', '*.lua', '*.go', '*.cpp', '*.c', '*.ts', '*.tsx' },
+    command = 'FormatWrite'
+})
