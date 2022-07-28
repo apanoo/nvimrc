@@ -25,9 +25,10 @@ function M.config()
 		-- 默认打开
 		open_on_setup = true,
 
-		-- 不显示 git 状态图标
+		-- 显示 git 状态图标
 		git = {
 			enable = true,
+			ignore = false,
 		},
 		-- project plugin 需要这样设置
 		update_cwd = true,
@@ -35,11 +36,17 @@ function M.config()
 			enable = true,
 			update_cwd = false,
 		},
+		filesystem_watchers = {
+			enable = false,
+			debounce_delay = 50,
+		},
 		filters = {
 			-- 隐藏 .文件
 			dotfiles = false,
 			-- 隐藏 node_modules 文件夹
 			-- custom = { "node_modules" },
+			custom = { ".git", "node_modules" },
+			exclude = { ".gitignore" }
 		},
 		view = {
 			-- 宽度

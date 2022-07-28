@@ -104,4 +104,7 @@ map('v', '<', '<gv')
 map('v', '>', '>gv')
 
 -- 代码格式化
-map("n", "<leader>f", "<cmd>FormatWrite<cr>", opt)
+map("n", "<leader>f", ":FormatWrite<cr>", opt)
+
+-- Buffer删除
+map({'n', 'i'}, '<A-w>', ':Bdelete<cr>', opt)
