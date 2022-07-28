@@ -23,6 +23,7 @@ require('config.nvim-hot').config()
 require('config.nvim-git').config()
 require('config.nvim-telescope').config()
 require('config.nvim-comment').config()
+require('config.nvim-impatient').config()
 
 -- lsp
 require("lsp.setup")
