@@ -157,5 +157,11 @@ require("packer").startup({
 		--------------------- Debug --------------------
 		use("mfussenegger/nvim-dap")
 		use("rcarriga/nvim-dap-ui")
+
+		-- surround
+		use("ur4ltz/surround.nvim")
+
+		-- align
+		use("Vonr/align.nvim")
 	end,
 })

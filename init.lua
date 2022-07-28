@@ -26,6 +26,7 @@ require("config.hop").config()
 require("config.gitsigns").config()
 require("config.telescope").config()
 require("config.comment").config()
+require("config.surround").config()
 
 -- lsp
 require("lsp.setup")

@@ -129,3 +129,17 @@ map("n", "<leader>f", ":FormatWrite<cr>", opt)
 
 -- Buffer删除
 map({ "n", "i" }, "<A-w>", ":Bdelete<cr>", opt)
+
+-- align : https://github.com/Vonr/align.nvim
+map("x", "aa", function()
+	require("align").align_to_char(1, true)
+end, opt) -- Aligns to 1 character, looking left
+map("x", "as", function()
+	require("align").align_to_char(2, true, true)
+end, opt) -- Aligns to 2 characters, looking left and with previews
+map("x", "aw", function()
+	require("align").align_to_string(false, true, true)
+end, opt) -- Aligns to a string, looking left and with previews
+map("x", "ar", function()
+	require("align").align_to_string(true, true, true)
+end, opt) -- Aligns to a Lua pattern, looking left and with previews
