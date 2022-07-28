@@ -6,7 +6,7 @@ end
 
 local options = {
   {
-    filetypes = {"typescript", "typescriptreact", "javascript"},
+    filetypes = {"typescript", "typescriptreact", "javascript", "javascriptreact"},
     rule = {
       -- prettier
       function()
@@ -14,6 +14,7 @@ local options = {
           exe = "prettier",
           args = { "--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), "--single-quote" },
           stdin = true,
+          try_node_modules = true,
         }
       end,
     },
