@@ -1,3 +1,7 @@
+
+vim.cmd("syntax on")
+vim.cmd("filetype plugin indent on")
+
 local options = {
 	backup = false, -- creates a backup file
 	clipboard = "unnamedplus", -- allows neovim to access the system clipboard
@@ -27,8 +31,6 @@ for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
-vim.cmd("syntax on")
-vim.cmd("filetype plugin indent on")
 if vim.fn.has("termguicolors") == 1 then
 	vim.opt.termguicolors = true
 end

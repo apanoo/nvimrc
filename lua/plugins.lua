@@ -49,13 +49,6 @@ require("packer").startup({
 		use("wbthomason/packer.nvim")
 
 		-- 配色主题 (disabled other themes to optimize startup time)
-		--    use 'sainnhe/sonokai'
-		--    use 'tiagovla/tokyodark.nvim'
-		--    use 'joshdick/onedark.vim'
-		--    use { 'catppuccin/nvim', as='catppuccin' }
-		--    use { 'sonph/onehalf', rtp='vim/' }
-		--    use 'liuchengxu/space-vim-dark'
-		--    use 'ahmedabdulrahman/aylin.vim'
 		use("rebelot/kanagawa.nvim")
 
 		-- 状态栏 lualine

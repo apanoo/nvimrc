@@ -4,11 +4,11 @@ require("options")
 -- autocmd
 require("autocmd")
 
--- theme
-require("theme")
-
 -- plugin
 require("plugins")
+
+-- theme
+require("theme")
 
 -- 加快启动时间
 require("impatient")
