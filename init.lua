@@ -1,6 +1,9 @@
 -- common options
 require('options')
 
+-- autocmd
+require('autocmd')
+
 -- theme
 require('theme')
 
