@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/aerial.nvim",
     url = "git@github.com:stevearc/aerial.nvim"
   },
+  ["align.nvim"] = {
+    loaded = true,
+    path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/align.nvim",
+    url = "git@github.com:Vonr/align.nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -118,6 +123,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/filetype.nvim",
     url = "git@github.com:nathom/filetype.nvim"
+  },
+  ["formatter.nvim"] = {
+    loaded = true,
+    path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/formatter.nvim",
+    url = "git@github.com:mhartington/formatter.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -253,6 +263,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/schemastore.nvim",
     url = "git@github.com:b0o/schemastore.nvim"
+  },
+  ["surround.nvim"] = {
+    loaded = true,
+    path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/surround.nvim",
+    url = "git@github.com:ur4ltz/surround.nvim"
   },
   ["telescope-fzf-native.nvim"] = {
     load_after = {},
