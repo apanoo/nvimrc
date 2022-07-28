@@ -26,32 +26,32 @@ local function switch_source_header_splitcmd(bufnr, splitcmd)
 end
 
 return {
-    on_setup = function(server)
-        server.setup({
-            capabilities = capabilities,
+	on_setup = function(server)
+		server.setup({
+			capabilities = capabilities,
 			single_file_support = true,
-			on_attach = function (client, bufnr)
-                -- 禁用格式化功能，交给专门插件插件处理
-                client.server_capabilities.document_formatting = false
-                client.server_capabilities.document_range_formatting = false
+			on_attach = function(client, bufnr)
+				-- 禁用格式化功能，交给专门插件插件处理
+				client.server_capabilities.document_formatting = false
+				client.server_capabilities.document_range_formatting = false
 
-                require("lsp_signature").on_attach({
-                    bind = true,
-                    use_lspsaga = false,
-                    floating_window = true,
-                    fix_pos = true,
-                    hint_enable = true,
-                    hi_parameter = "Search",
-                    handler_opts = { "double" },
-                })
-                require("aerial").on_attach(client)
-                require("illuminate").on_attach(client)
-                local function buf_set_keymap(...)
-                    vim.api.nvim_buf_set_keymap(bufnr, ...)
-                  end
-                -- 绑定快捷键
-                require("keybindings").mapLSP(buf_set_keymap)
-            end,
+				require("lsp_signature").on_attach({
+					bind = true,
+					use_lspsaga = false,
+					floating_window = true,
+					fix_pos = true,
+					hint_enable = true,
+					hi_parameter = "Search",
+					handler_opts = { "double" },
+				})
+				require("aerial").on_attach(client)
+				require("illuminate").on_attach(client)
+				local function buf_set_keymap(...)
+					vim.api.nvim_buf_set_keymap(bufnr, ...)
+				end
+				-- 绑定快捷键
+				require("keybindings").mapLSP(buf_set_keymap)
+			end,
 			args = {
 				"--background-index",
 				"-std=c++20",
@@ -79,6 +79,6 @@ return {
 					description = "Open source/header in a new split",
 				},
 			},
-        })
-    end
+		})
+	end,
 }

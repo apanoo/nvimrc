@@ -46,7 +46,7 @@ function M.config()
 			-- 隐藏 node_modules 文件夹
 			-- custom = { "node_modules" },
 			custom = { ".git", "node_modules" },
-			exclude = { ".gitignore" }
+			exclude = { ".gitignore" },
 		},
 		view = {
 			-- 宽度
@@ -59,8 +59,8 @@ function M.config()
 			mappings = {
 				custom_only = false,
 				list = {
-					{ key = "v", cb = tree_cb "vsplit" },
-					{ key = "i", cb = tree_cb "split" },
+					{ key = "v", cb = tree_cb("vsplit") },
+					{ key = "i", cb = tree_cb("split") },
 					-- 切换到下一个同级项
 					{ key = "<A-j>", cb = Api.node.navigate.sibling.next },
 					-- 切换到上一个同级项

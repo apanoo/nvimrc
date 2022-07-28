@@ -3,11 +3,11 @@ local M = {}
 function M.config()
 	local Bufferline = require("utils").requirePlugin("bufferline")
 
-    if not Bufferline then
-        return 
-    end
+	if not Bufferline then
+		return
+	end
 
-	Bufferline.setup {
+	Bufferline.setup({
 		options = {
 			mode = "buffers", -- set to "tabs" to only show tabpages instead
 			numbers = "none",
@@ -18,20 +18,20 @@ function M.config()
 			-- NOTE: this plugin is designed with this icon in mind,
 			-- and so changing this is NOT recommended, this is intended
 			-- as an escape hatch for people who cannot bear it for whatever reason
-			indicator_icon = '▎',
-			buffer_close_icon = '',
-			modified_icon = '●',
-			close_icon = '',
-			left_trunc_marker = '|',
-			right_trunc_marker = '|',
+			indicator_icon = "▎",
+			buffer_close_icon = "",
+			modified_icon = "●",
+			close_icon = "",
+			left_trunc_marker = "|",
+			right_trunc_marker = "|",
 			--- name_formatter can be used to change the buffer's label in the bufferline.
 			--- Please note some names can/will break the
 			--- bufferline so use this at your discretion knowing that it has
 			--- some limitations that will *NOT* be fixed.
 			name_formatter = function(buf) -- buf contains a "name", "path" and "bufnr"
 				-- remove extension from markdown files for example
-				if buf.name:match('%.md') then
-					return vim.fn.fnamemodify(buf.name, ':t:r')
+				if buf.name:match("%.md") then
+					return vim.fn.fnamemodify(buf.name, ":t:r")
 				end
 			end,
 			max_name_length = 18,
@@ -42,8 +42,7 @@ function M.config()
 			diagnostics_indicator = function(count, level, diagnostics_dict, context)
 				local s = " "
 				for e, n in pairs(diagnostics_dict) do
-					local sym = e == "error" and " "
-						or (e == "warning" and " " or "")
+					local sym = e == "error" and " " or (e == "warning" and " " or "")
 					s = s .. sym
 				end
 				return s
@@ -68,8 +67,10 @@ function M.config()
 					return true
 				end
 			end,
-			offsets = { { filetype = "NvimTree", text = "File Explorer", text_align = "center" },
-				{ filetype = "SymbolsOutline", text = "Symbols Outline", text_align = "center" } },
+			offsets = {
+				{ filetype = "NvimTree", text = "File Explorer", text_align = "center" },
+				{ filetype = "SymbolsOutline", text = "Symbols Outline", text_align = "center" },
+			},
 			color_icons = true,
 			show_buffer_icons = true, -- disable filetype icons for buffers
 			show_buffer_close_icons = true,
@@ -82,9 +83,9 @@ function M.config()
 			separator_style = "slant", -- "slant" | "thick" | "thin" | { 'any', 'any' }, -- tab的分割样式
 			enforce_regular_tabs = false,
 			always_show_bufferline = true,
-			sort_by = 'id'
-		}
-	}
+			sort_by = "id",
+		},
+	})
 end
 
 return M

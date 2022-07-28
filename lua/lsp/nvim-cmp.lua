@@ -6,66 +6,65 @@
 local cmp = require("cmp")
 
 cmp.setup({
-  -- 指定 snippet 引擎
-  snippet = {
-    expand = function(args)
-      -- For `vsnip` users.
-      vim.fn["vsnip#anonymous"](args.body)
+	-- 指定 snippet 引擎
+	snippet = {
+		expand = function(args)
+			-- For `vsnip` users.
+			vim.fn["vsnip#anonymous"](args.body)
 
-      -- For `luasnip` users.
-      -- require('luasnip').lsp_expand(args.body)
+			-- For `luasnip` users.
+			-- require('luasnip').lsp_expand(args.body)
 
-      -- For `ultisnips` users.
-      -- vim.fn["UltiSnips#Anon"](args.body)
+			-- For `ultisnips` users.
+			-- vim.fn["UltiSnips#Anon"](args.body)
 
-      -- For `snippy` users.
-      -- require'snippy'.expand_snippet(args.body)
-    end,
-  },
-  -- 来源
-  sources = cmp.config.sources({
-    { name = "nvim_lsp" },
-    { name = "nvim_lsp_signature_help" },
-    -- For vsnip users.
-    { name = "vsnip" },
-    { name = "buffer" },
-    -- For luasnip users.
-    -- { name = 'luasnip' },
-    --For ultisnips users.
-    -- { name = 'ultisnips' },
-    -- -- For snippy users.
-    -- { name = 'snippy' },
-  }, { { name = "path" } }),
+			-- For `snippy` users.
+			-- require'snippy'.expand_snippet(args.body)
+		end,
+	},
+	-- 来源
+	sources = cmp.config.sources({
+		{ name = "nvim_lsp" },
+		{ name = "nvim_lsp_signature_help" },
+		-- For vsnip users.
+		{ name = "vsnip" },
+		{ name = "buffer" },
+		-- For luasnip users.
+		-- { name = 'luasnip' },
+		--For ultisnips users.
+		-- { name = 'ultisnips' },
+		-- -- For snippy users.
+		-- { name = 'snippy' },
+	}, { { name = "path" } }),
 
-  -- 快捷键
-  mapping = require("keybindings").cmp(cmp),
-  -- 使用lspkind-nvim显示类型图标
-  formatting = require("lsp.ui").formatting,
+	-- 快捷键
+	mapping = require("keybindings").cmp(cmp),
+	-- 使用lspkind-nvim显示类型图标
+	formatting = require("lsp.ui").formatting,
 })
 
 -- Use buffer source for `/`.
 cmp.setup.cmdline("/", {
-  sources = {
-    { name = "buffer" },
-  },
+	sources = {
+		{ name = "buffer" },
+	},
 })
 
 -- Use cmdline & path source for ':'.
 cmp.setup.cmdline(":", {
-  mapping = cmp.mapping.preset.cmdline(),
-  sources = cmp.config.sources({
-    { name = "path" },
-  }, {
-    { name = "cmdline" },
-  }),
+	mapping = cmp.mapping.preset.cmdline(),
+	sources = cmp.config.sources({
+		{ name = "path" },
+	}, {
+		{ name = "cmdline" },
+	}),
 })
 
 -- 可选： 补全function结束后，自动补全括号
 -- 与lspconfig中的usePlaceholders不冲突
-local cmp_autopairs = require "nvim-autopairs.completion.cmp"
+local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
-  return
+	return
 end
-cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done { map_char = { tex = "" } })
-
+cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done({ map_char = { tex = "" } }))
