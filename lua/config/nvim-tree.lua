@@ -3,9 +3,20 @@ function M.config()
 	-- https://github.com/kyazdani42/nvim-tree.lua
 	local Nvimtree = require("utils").requirePlugin("nvim-tree")
 
-    if not Nvimtree then
-        return 
-    end
+	if not Nvimtree then
+		return
+	end
+
+	local nvim_tree_config = require("utils").requirePlugin("nvim-tree.config")
+	if not nvim_tree_config then
+		return
+	end
+
+	local tree_cb = nvim_tree_config.nvim_tree_callback
+	local Api = require("utils").requirePlugin("nvim-tree.api")
+	if not Api then
+		return
+	end
 
 	Nvimtree.setup({
 		-- 完全禁止内置netrw
@@ -39,8 +50,15 @@ function M.config()
 			hide_root_folder = false,
 			-- 自定义列表中快捷键
 			mappings = {
-				-- 只用内置快捷键
-				custom_only = true,
+				custom_only = false,
+				list = {
+					{ key = "v", cb = tree_cb "vsplit" },
+					{ key = "i", cb = tree_cb "split" },
+					-- 切换到下一个同级项
+					{ key = "<A-j>", cb = Api.node.navigate.sibling.next },
+					-- 切换到上一个同级项
+					{ key = "<A-k>", cb = Api.node.navigate.sibling.prev },
+				},
 			},
 			-- 不显示行数
 			number = false,
