@@ -44,8 +44,6 @@ return {
 					hi_parameter = "Search",
 					handler_opts = { "double" },
 				})
-				require("aerial").on_attach(client)
-				require("illuminate").on_attach(client)
 				local function buf_set_keymap(...)
 					vim.api.nvim_buf_set_keymap(bufnr, ...)
 				end

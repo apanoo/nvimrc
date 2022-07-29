@@ -41,6 +41,25 @@ cmp.setup({
 	mapping = require("keybindings").cmp(cmp),
 	-- 使用lspkind-nvim显示类型图标
 	formatting = require("lsp.ui").formatting,
+
+	-- 边框
+	-- window = {
+	--   completion = cmp.config.window.bordered(),
+	--   documentation = cmp.config.window.bordered(),
+	-- },
+	-- confirm_opts = {
+	--   behavior = cmp.ConfirmBehavior.Replace,
+	--   select = false,
+	-- },
+	-- completion = {
+	--   ---@usage The minimum length of a word to complete on.
+	--   keyword_length = 1,
+	-- },
+	experimental = {
+	  ghost_text = true,
+	  native_menu = false,
+	},
+  
 })
 
 -- Use buffer source for `/`.

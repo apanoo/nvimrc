@@ -73,6 +73,16 @@ function M.config()
 			-- 显示图标
 			signcolumn = "yes",
 		},
+		diagnostics = {
+			enable = true,
+			show_on_dirs = false,
+			icons = {
+			  hint = "",
+			  info = "",
+			  warning = "",
+			  error = "",
+			},
+		  },	
 		renderer = {
 			icons = {
 				git_placement = "before", -- "before" | "after"
