@@ -143,3 +143,6 @@ end, opt) -- Aligns to a string, looking left and with previews
 map("x", "ar", function()
 	require("align").align_to_string(true, true, true)
 end, opt) -- Aligns to a Lua pattern, looking left and with previews
+
+-- 错误/警告 - 搜索
+map({"i", "n"}, "<leader>fd", ":Telescope diagnostics<cr>", opt)
