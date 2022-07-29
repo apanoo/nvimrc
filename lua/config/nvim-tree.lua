@@ -59,6 +59,9 @@ function M.config()
 			mappings = {
 				custom_only = false,
 				list = {
+					{ key = "u", action = "dir_up" },
+					{ key = "C", action = "cd" },
+					{ key = "cd", action = "cd" },
 					{ key = "v", cb = tree_cb("vsplit") },
 					{ key = "i", cb = tree_cb("split") },
 					-- 切换到下一个同级项
