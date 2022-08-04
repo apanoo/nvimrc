@@ -6,7 +6,7 @@ end
 
 local options = {
 	{
-		filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+		filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "json", "html" },
 		rule = {
 			-- prettier
 			function()
@@ -91,6 +91,6 @@ formatter.setup({
 vim.api.nvim_create_augroup("FormatAutogroup", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePost", {
 	group = "FormatAutogroup",
-	pattern = { "*.js", "*.rs", "*.lua", "*.go", "*.cpp", "*.c", "*.ts", "*.tsx" },
+	pattern = { "*.js", "*.rs", "*.lua", "*.go", "*.cpp", "*.c", "*.ts", "*.tsx", "*.json", "*.html" },
 	command = "FormatWrite",
 })
