@@ -273,7 +273,7 @@ _G.packer_plugins = {
     load_after = {},
     loaded = true,
     needs_bufread = false,
-    path = "/Users/apanoo/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    path = "/Users/apanoo/.local/share/nvim/site/pack/packer/opt/telescope-fzf-native.nvim",
     url = "git@github.com:nvim-telescope/telescope-fzf-native.nvim"
   },
   ["telescope.nvim"] = {
