@@ -65,9 +65,9 @@ function M.config()
 					{ key = "v", cb = tree_cb("vsplit") },
 					{ key = "i", cb = tree_cb("split") },
 					-- 切换到下一个同级项
-					{ key = "<A-j>", cb = Api.node.navigate.sibling.next },
+					{ key = "<C-j>", cb = Api.node.navigate.sibling.next },
 					-- 切换到上一个同级项
-					{ key = "<A-k>", cb = Api.node.navigate.sibling.prev },
+					{ key = "<C-k>", cb = Api.node.navigate.sibling.prev },
 				},
 			},
 			-- 不显示行数
