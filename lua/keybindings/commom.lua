@@ -146,3 +146,8 @@ end, opt) -- Aligns to a Lua pattern, looking left and with previews
 
 -- 错误/警告 - 搜索
 map({"i", "n"}, "<leader>fd", ":Telescope diagnostics<cr>", opt)
+
+-- 快速高亮搜索并跳转到下一个单词 Shift *
+map("n", "sj", "<S-*>")
+-- 快速高亮搜索并跳转到上一个单词 Shift #
+map("n", "sk", "<S-#>")

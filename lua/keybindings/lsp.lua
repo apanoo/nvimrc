@@ -44,6 +44,10 @@ return function(mapbuf)
 	mapbuf("n", "gp", "<cmd>Lspsaga show_line_diagnostics<CR>", opt)
 	mapbuf("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", opt)
 	mapbuf("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opt)
+	-- goto next error
+	mapbuf("n", "gjj", "<cmd>lua require('lspsaga.diagnostic').goto_next({ severity = vim.diagnostic.severity.ERROR })<cr>", opt)
+	-- goto prev error
+	mapbuf("n", "gkk", "<cmd>lua require('lspsaga.diagnostic').goto_prev({ severity = vim.diagnostic.severity.ERROR })<cr>", opt)
 
 	-- 已经使用了formatter.nvim来做格式化，此处不适用了
 	-- mapbuf("n", "<leader>f", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opt)
